@@ -31,7 +31,7 @@ public class Main {
                 case "T-shirt" :
                     String order = "T-shirt";
 
-                    System.out.println("Very Well !! now to make you r order uou need to give us some informations about you.");
+                    System.out.println("Very Well !! now to make your order you need to give us some informations about you.");
                     System.out.printf("Your name : ");
                     name = scanner.next();
                     System.out.printf("Your age : ");
