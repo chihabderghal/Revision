@@ -21,9 +21,7 @@ public class Main {
 
             System.out.printf("Great !! These is our product and their prices, take a look at them : \n");
             System.out.println("1 - T-shirt : 2000 DA");
-            System.out.println("2 - Hodie : 2999 DA");
-            System.out.println("3 - Jacket : 4999 DA");
-            System.out.println("4 - Shoes : 4000 DA");
+            System.out.println("2 - Jacket : 4999 DA");
             System.out.println("What dou you want to buy ?");
             answer = scanner.nextLine();
 
