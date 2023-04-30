@@ -1,8 +1,7 @@
 package Product;
 
 public class Product {
-    String size;
+    String size, color, productGender;
     int price;
-    String productGender;
 
 }
