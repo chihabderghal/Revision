@@ -27,7 +27,7 @@ public class Main {
 
             switch (answer) {
                 case "T-shirt" :
-                    String order = "T-shirt";
+                    String orderOne = "T-shirt";
 
                     System.out.println("Very Well !! now to make your order you need to give us some informations about you.");
                     System.out.printf("Your name : ");
@@ -48,34 +48,55 @@ public class Main {
                     budget = scanner.nextInt();
                     System.out.printf("\n");
 
-                    Customer customer = new Customer(name, gender, age, country, budget, address, order, size);
+                    Customer customerOne = new Customer(name, gender, age, country, budget, address, orderOne, size);
                     Tshirt tshirt = new Tshirt(size, color, gender);
-                    Buy customerBuy = new Buy(customer, tshirt);
-                    customerBuy.showOrderStatus();
+                    Buy customerBuyOne = new Buy(customerOne, tshirt);
+                    customerBuyOne.showOrderStatus();
 
                     System.out.println("Thx, your order will arrive to you soon as possible");
                     System.exit(0);
                     scanner.close();
                     break;
 
-                    package Product;
-                    public class Tshirt extends Product {
-                    public static float price = 2000;
-                    public Tshirt(String size, String color, String productGender) {
-                        super(size, color, productGender, price);
-                    }
-                }
+                case "jacket" :
+                    String orderTwo = "Jacket";
+
+                    System.out.println("Very Well !! now to make your order you need to give us some informations about you.");
+                    System.out.printf("Your name : ");
+                    name = scanner.next();
+                    System.out.printf("Your age : ");
+                    age = scanner.nextByte();
+                    System.out.printf("Your gender : ");
+                    gender = scanner.next();
+                    System.out.printf("Your size : ");
+                    size = scanner.next();
+                    System.out.printf("color : ");
+                    color = scanner.next();
+                    System.out.printf("Your country : ");
+                    country = scanner.next();
+                    System.out.printf("Your address : ");
+                    address = scanner.next();
+                    System.out.printf("Your budget : ");
+                    budget = scanner.nextInt();
+                    System.out.printf("\n");
+
+                    Customer customerTwo = new Customer(name, gender, age, country, budget, address, orderTwo, size);
+                    Jacket jacket = new Jacket(size, color, gender);
+                    Buy customerBuyTwo = new Buy(customerTwo, jacket);
+                    customerBuyTwo.showOrderStatus();
+
+                    System.out.println("Thx, your order will arrive to you soon as possible");
+                    System.exit(0);
+                    scanner.close();
+                    break;
+
+
+
 
 
 
 
             }
-
-
-
-
-
-
         }
     }
 }
