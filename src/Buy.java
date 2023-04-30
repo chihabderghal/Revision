@@ -1,15 +1,19 @@
 import Client.*;
+import Product.Product;
 
 public class Buy {
     Customer customer;
+    Product product;
     public int quantity;
     public static int numberOfSelles = 0;
-    // private float resetOfMoney;
 
-    public Buy(Customer customer) {
+    public Buy(Customer customer, Product product) {
         this.customer = customer;
+        this.product = product;
         numberOfSelles++;
     }
+
+    private float resetOfMoney = customer.getBudget() - product.getPrice();
 
     public void showOrderStatus() {
         System.out.println("-------------------------------------");

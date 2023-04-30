@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String answer, name, gender, country, address, size;
+        String answer, name, gender, country, address, size, color;
         byte age;
         int budget;
 
@@ -38,22 +38,34 @@ public class Main {
                     gender = scanner.next();
                     System.out.printf("Your size : ");
                     size = scanner.next();
+                    System.out.printf("color : ");
+                    color = scanner.next();
                     System.out.printf("Your country : ");
                     country = scanner.next();
                     System.out.printf("Your address : ");
                     address = scanner.next();
                     System.out.printf("Your budget : ");
                     budget = scanner.nextInt();
-                    System.out.printf("\n\n");
+                    System.out.printf("\n");
 
                     Customer customer = new Customer(name, gender, age, country, budget, address, order, size);
-                    Buy customerBuy = new Buy(customer);
+                    Tshirt tshirt = new Tshirt(size, color, gender);
+                    Buy customerBuy = new Buy(customer, tshirt);
                     customerBuy.showOrderStatus();
 
                     System.out.println("Thx, your order will arrive to you soon as possible");
                     System.exit(0);
                     scanner.close();
                     break;
+
+                    package Product;
+                    public class Tshirt extends Product {
+                    public static float price = 2000;
+                    public Tshirt(String size, String color, String productGender) {
+                        super(size, color, productGender, price);
+                    }
+                }
+
 
 
 
