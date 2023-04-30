@@ -9,7 +9,7 @@ public class Main {
 
         String answer, name, gender, country, address, size, color;
         byte age;
-        int budget;
+        float budget;
 
         while (true) {
             System.out.printf("Welcome To our store !!\n");
@@ -45,7 +45,7 @@ public class Main {
                     System.out.printf("Your address : ");
                     address = scanner.next();
                     System.out.printf("Your budget : ");
-                    budget = scanner.nextInt();
+                    budget = scanner.nextFloat();
                     System.out.printf("\n");
 
                     Customer customerOne = new Customer(name, gender, age, country, budget, address, orderOne, size);
@@ -58,7 +58,7 @@ public class Main {
                     scanner.close();
                     break;
 
-                case "jacket" :
+                case "Jacket" :
                     String orderTwo = "Jacket";
 
                     System.out.println("Very Well !! now to make your order you need to give us some informations about you.");
@@ -77,13 +77,15 @@ public class Main {
                     System.out.printf("Your address : ");
                     address = scanner.next();
                     System.out.printf("Your budget : ");
-                    budget = scanner.nextInt();
+                    budget = scanner.nextFloat();
                     System.out.printf("\n");
 
                     Customer customerTwo = new Customer(name, gender, age, country, budget, address, orderTwo, size);
                     Jacket jacket = new Jacket(size, color, gender);
                     Buy customerBuyTwo = new Buy(customerTwo, jacket);
                     customerBuyTwo.showOrderStatus();
+                    // System.out.println(customerTwo.getName());
+                    // customerBuyTwo.show();
 
                     System.out.println("Thx, your order will arrive to you soon as possible");
                     System.exit(0);

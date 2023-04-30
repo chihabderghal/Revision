@@ -4,6 +4,10 @@ package Product;
         public String size, color, productGender;
         protected float price;
 
+        public float getPrice() {
+            return price;
+        }
+
         public Product(String size, String color, String productGender, float price) {
             this.size = size;
             this.color = color;

@@ -2,8 +2,8 @@ package Client;
 
 public class Customer extends Human {
     public String address, order, size;
-    private int budget;
-    public Customer(String name, String gender, byte age, String country, int budget, String address, String order, String size) {
+    public float budget;
+    public Customer(String name, String gender, byte age, String country, float budget, String address, String order, String size) {
         super(name, gender, age, country);
         this.budget = budget;
         this.address = address;
@@ -26,12 +26,8 @@ public class Customer extends Human {
         this.order = order;
     }
 
-    public int getBudget() {
+    public float getBudget() {
         return budget;
-    }
-
-    public void setBudget(int budget) {
-        this.budget = budget;
     }
 
 }
