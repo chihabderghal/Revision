@@ -84,20 +84,11 @@ public class Main {
                     Jacket jacket = new Jacket(size, color, gender);
                     Buy customerBuyTwo = new Buy(customerTwo, jacket);
                     customerBuyTwo.showOrderStatus();
-                    // System.out.println(customerTwo.getName());
-                    // customerBuyTwo.show();
 
                     System.out.println("Thx, your order will arrive to you soon as possible");
                     System.exit(0);
                     scanner.close();
                     break;
-
-
-
-
-
-
-
             }
         }
     }
