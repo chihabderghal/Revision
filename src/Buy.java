@@ -21,7 +21,10 @@ public class Buy {
         System.out.printf("(%d) Customer information : \n", numberOfSelles);
         System.out.println("Name : " + customer.getName());
         System.out.println("Age : " + customer.getAge());
-        System.out.println("Gender : " + customer.getGender());
+
+        if (customer.getGender() != null)
+            System.out.println("Gender : " + customer.getGender());
+
         System.out.println("Country : " + customer.getCountry());
         System.out.println("address : " + customer.getAddress());
         System.out.println("-------------------------------------");

@@ -10,6 +10,13 @@ public class Customer extends Human {
         this.order = order;
         this.size = size;
     }
+    public Customer(String name, byte age, String country, float budget, String address, String order, String size) {
+        super(name, age, country);
+        this.budget = budget;
+        this.address = address;
+        this.order = order;
+        this.size = size;
+    }
     public String getAddress() {
         return address;
     }

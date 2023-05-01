@@ -48,10 +48,17 @@ public class Main {
                     budget = scanner.nextFloat();
                     System.out.printf("\n");
 
-                    Customer customerOne = new Customer(name, gender, age, country, budget, address, orderOne, size);
-                    Tshirt tshirt = new Tshirt(size, color, gender);
-                    Buy customerBuyOne = new Buy(customerOne, tshirt);
-                    customerBuyOne.showOrderStatus();
+                    if (gender.equalsIgnoreCase("null")) {
+                        Customer customerOne = new Customer(name, age, country, budget, address, orderOne, size);
+                        Tshirt tshirt = new Tshirt(size, color, gender);
+                        Buy customerBuyOne = new Buy(customerOne, tshirt);
+                        customerBuyOne.showOrderStatus();
+                    } else {
+                        Customer customerOne = new Customer(name, gender, age, country, budget, address, orderOne, size);
+                        Tshirt tshirt = new Tshirt(size, color, gender);
+                        Buy customerBuyOne = new Buy(customerOne, tshirt);
+                        customerBuyOne.showOrderStatus();
+                    }
 
                     System.out.println("Thx, your order will arrive to you soon as possible");
                     System.exit(0);

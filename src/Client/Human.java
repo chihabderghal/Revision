@@ -4,11 +4,15 @@ public class Human {
     String name, gender, country;
     byte age;
 
-    public Human(String name, String gender, byte age, String country) {
+    public Human(String name, byte age, String country) {
         this.name = name;
-        this.gender = gender;
         this.age = age;
         this.country = country;
+    }
+
+    public Human(String name, String gender, byte age, String country) {
+        this(name, age, country);
+        this.gender = gender;
     }
 
     public String getCountry() {
